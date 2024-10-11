@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.madan.ro
+
+# Sitemaps
+Sitemap: https://www.madan.ro/sitemap.xml

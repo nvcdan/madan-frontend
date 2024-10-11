@@ -1,0 +1,181 @@
+
+.navbar {
+    background-color: transparent;
+    border-bottom: 1px solid var(--light);
+    position: relative;
+    z-index: 999;
+  }
+  
+  .logo span {
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    color: var(--dark);
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .navLinkSpecial {
+    color: var(--dark);
+    background-color: transparent;
+    border: 1px solid var(--dark);
+    padding: 6px 20px;
+    margin: 0 10px;
+    font-weight: 500;
+    border-radius: 50px;
+    font-size: 14px !important;
+  }
+  
+  .navLinkSpecial:hover {
+    color: var(--light);
+    background-color: var(--dark);
+  }
+
+  .active {
+    background-color: black;
+  }
+
+  .navLink {
+    color: var(--dark);
+    margin-left: 2rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .navLink:hover {
+    text-decoration: underline;
+  }
+  
+  .menuButton {
+    background: none;
+    border: none;
+    color: var(--dark);
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    background-color: var(--light);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 999 !important;
+}
+
+.icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menuIcon {
+    color: var(--dark);
+}
+
+.closeIcon {
+    color: var(--dark);
+    transform: rotate(180deg);
+}
+  
+  .mobileMenu span {
+    margin: 1rem;
+    font-size: 1.2rem;
+    color: var(--dark);
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .subNavbar {
+    padding: 10px 20px;
+    border-radius: 0 0 20px 20px;
+    background-color: var(--light);
+  }
+
+  .subNavLink {
+    color: var(--dark);
+    margin-right: 2rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+.mobileSubNavLink {
+    color: var(--dark);
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin: 0 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mobileSubNavLink:hover {
+    background-color: var(--dark); 
+    color: var(--light); 
+    border-radius: 5px;
+}
+
+.mobileMenu {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light); /* Culoarea fundalului cu transparență: folosește rgba pentru culoare semi-transparentă */
+    backdrop-filter: blur(20px);
+    transition: left 0.4s ease-in-out;
+    z-index: 998;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuie spațiu între elementele copil */
+    overflow: hidden;
+}
+
+.mobileMenu.open {
+    left: 0;
+}
+
+.mobileTopNav {
+    margin-top: 40px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap; /* Nu mai înfășoară elementele, toate stau pe un singur rând */
+    overflow-x: auto; /* Permite scroll-ul orizontal */
+    scrollbar-width: thin; /* Subțire, doar pentru Firefox */
+    -webkit-overflow-scrolling: touch; /* Să se comporte bine pe dispozitive mobile */
+    border-bottom: 1px solid var(--light);
+    padding: 20px 0;
+}
+
+.mobileTopNav::-webkit-scrollbar {
+    height: 5px; /* Înălțimea scroll-bar-ului */
+}
+
+.mobileTopNav::-webkit-scrollbar-thumb {
+    background-color: var(--dark); /* Culoarea scroll-bar-ului */
+    border-radius: 10px; /* Formă rotunjită */
+}
+
+.navLinkSpecial {
+    white-space: nowrap; /* Asigură că textul rămâne pe un singur rând */
+}
+
+.mobileMenuCentered {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-transform: uppercase;
+}
+
+.mobileSubNav {
+    width: 100%;
+    text-align: center;
+    background: var(--main);
+    padding: 10px;
+    display: flex; 
+    justify-content: space-evenly;
+    align-items: center;
+}
