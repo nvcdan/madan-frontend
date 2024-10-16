@@ -1,8 +1,9 @@
 :root {
-  --main: #FFF8E8;
+  --white: rgba(255, 251, 243, 1);
+  --main: rgba(255, 251, 243, 0.9);
   --secondary: #AAB396;
-  --light: #F7EED3;
-  --dark: #674636;
+  --light: rgba(249, 245, 231, 0.9);
+  --dark: #332d00;
 }
 
 html,
@@ -13,11 +14,44 @@ body {
 
 body {
   color: var(--dark) !important;
-  background: var(--main) !important;
-  font-family: var(--font-playfair-display), Arial, Helvetica, sans-serif;
+  background: var(--white) !important;
+  font-family: var(--font-lato), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+input {
+  border: 2px solid var(--light);
+  border-radius: 25px;
+  padding: 10px 15px;
+  background-color: var(--white);
+}
+
+.madanMain {
+  margin-top: 5em;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.handwritten {
+  font-family: var(--font-marck), cursive;
+  font-size: 2em;
+}
+
+.bold900 {
+  font-weight: 900 !important;
+}
+
+.bold800 {
+  font-weight: 800 !important;
+}
+
+.bold700 {
+  font-weight: 700 !important;
+}
+
 
 * {
   box-sizing: border-box;

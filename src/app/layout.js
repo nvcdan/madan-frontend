@@ -1,6 +1,5 @@
 import '@/app/styles/globals.css';
-import { Playfair_Display } from 'next/font/google';
-import { Lato } from 'next/font/google';
+import { Playfair_Display, Lato, Marck_Script } from 'next/font/google';
 import  "bootstrap/dist/css/bootstrap.min.css";
 import Bootstrap from './Bootstrap';
 
@@ -11,12 +10,21 @@ const playfairDisplay = Playfair_Display({
   display: 'swap',        
 });
 
+const marckScript = Marck_Script({
+  subsets: ['latin'],
+  weight: ['400'], 
+  variable: '--font-marck',
+  display: 'swap',        
+});
+
 const lato = Lato({
   subsets: ['latin'],
   weight: ['400', '700', '900'], 
   variable: '--font-lato',
   display: 'swap',        
 });
+
+
 
 export const metadata = {
   title: 'MADAN | Invitații digitale, meniuri QR, gestiune',
@@ -48,7 +56,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ro" className={`${playfairDisplay.variable, lato.variable}`}>
+    <html lang="ro" className={`${playfairDisplay.variable, lato.variable, marckScript.variable}`}>
       <Bootstrap/>
       <body>{children}</body>
     </html>

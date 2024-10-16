@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from "react";
 import Link from 'next/link';
 import styles from './Navbar.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,17 +8,36 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     const [navOpen, setNavOpen] = useState(false);
+    const [showNavbar, setShowNavbar] = useState(true);
+    const lastScrollY = useRef(0);
 
     const toggleNav = () => {
         setNavOpen(!navOpen);
     };
 
+    const handleScroll = () => {
+        if (window.scrollY > lastScrollY.current) {
+            setShowNavbar(false);
+        } else {
+            setShowNavbar(true);
+        }
+        lastScrollY.current = window.scrollY;
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
         <nav>
-            <div className={`container-fluid ${styles.navbar}`}>
-                <div className="container d-flex justify-content-between align-items-center">
+            <div className={`container-fluid ${styles.navbar} ${showNavbar ? styles.show : styles.hide}`}>
+                <div className={`container d-flex justify-content-between align-items-center ${styles.navbarContainer}`}>
                     <div className="d-flex align-items-center">
-                        <div className={`text-lime ${styles.logo}`}>
+                        <div className={`text-lime text-center ${styles.logo}`}>
                             <Link href="/" passHref>
                                 <span>MD</span>
                             </Link>
@@ -53,7 +72,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <div className="d-none d-md-flex">
+            {/* <div className="d-none d-md-flex">
                 <div className="container justify-content-between align-items-center">
                     <div className={`align-items-center ${styles.subNavbar} `}>
                         <Link href="/testimoniale" passHref>
@@ -64,9 +83,9 @@ const Navbar = () => {
                         </Link>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className={`d-md-none ${styles.mobileMenu} ${navOpen ? styles.open : ''}`}>
-                <div className={styles.mobileTopNav}>
+                <div className={` container ${styles.mobileTopNav} `}>
                     <Link href="/" passHref>
                         <span className={styles.navLinkSpecial}>Invitații</span>
                     </Link>

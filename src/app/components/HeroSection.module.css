@@ -1,0 +1,88 @@
+.mainSection {
+  background: url('/images/demo.webp'); 
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  margin-top: 1em;
+}
+
+.mainSection h1 {
+  font-weight: 900;
+}
+
+.customCard {
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  transition: backdrop-filter 0.5s ease, box-shadow 0.3s ease;
+  color: var(--dark);
+  width: 100%;
+  max-width: 350px; 
+}
+
+.demoBtn {
+  margin-top: 20px;
+  border-radius: 30px;
+  padding: 10px 10px;
+  transition: filter 0.5s ease;
+  border: none;
+  color: white;
+  font-weight: bold;
+  background-image: url('/images/backdrop.svg');
+  background-size: cover;
+  filter:sepia(0.2);
+  
+}
+
+.demoBtn:hover {
+  filter:sepia(0.8);
+}
+
+.customCard .card-body {
+  padding: 0;
+}
+
+.roundedImage {
+  border-radius: 15px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .mainSection h1 {
+    font-size: 2rem; /* Smaller title on mobile */
+  }
+
+  .customCard {
+    max-width: 100%; /* Makes sure it fits mobile screens */
+  }
+}
+
+.container .row {
+  margin-top: 30px;
+}
+
+.border {
+  border: 2px solid #ddd;
+  transition: transform 0.3s;
+}
+
+.border:hover {
+  transform: scale(1.05);
+  background-color: #f9f9f9;
+}
+
+.heroLabel {
+  font-weight: 600;
+  color: var(--white);
+  font-size: 13px;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+  padding: 2px 5px 30px 5px;
+  background-color: var(--secondary);
+  margin-bottom: -28px;
+}
