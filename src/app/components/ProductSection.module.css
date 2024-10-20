@@ -1,6 +1,6 @@
 .customCard {
   background-color: var(--dark);
-  min-height: 300px;
+  min-height: 350px;
   padding: 20px;
   border-radius: 25px;
   color: var(--light);
@@ -12,8 +12,16 @@
 }
 
 .customCard h3 {
-  font-weight: 600;
+  font-weight: 500;
 }
+
+
+.customCard h1 {
+  font-weight: 500;
+  font-size: 3em;
+  margin-bottom: 0;
+}
+
 
 .customCard p {
   font-size: 14px;
@@ -60,4 +68,8 @@
   background-color: transparent;
   border: 2px solid var(--dark);
   cursor: pointer;
+}
+
+.productSection {
+  margin-bottom: 4em;
 }

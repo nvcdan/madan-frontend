@@ -16,6 +16,9 @@ const Navbar = () => {
     };
 
     const handleScroll = () => {
+        if (navOpen) {
+            return;
+        }
         if (window.scrollY > lastScrollY.current) {
             setShowNavbar(false);
         } else {
@@ -30,7 +33,7 @@ const Navbar = () => {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, []);
+    }, [navOpen]);
 
     return (
         <nav>
@@ -49,6 +52,9 @@ const Navbar = () => {
                             <Link href="/momente" passHref>
                                 <span className={styles.navLinkSpecial}>Momente QR</span>
                             </Link>
+                            <Link href="/gestiune" passHref>
+                                <span className={styles.navLinkSpecial}>Gestiune</span>
+                            </Link>
                         </div>
                     </div>
                     <div className="d-none d-md-flex align-items-center">
@@ -56,7 +62,7 @@ const Navbar = () => {
                             <span className={styles.navLink}>Preturi</span>
                         </Link>
                         <Link href="/servicii" passHref>
-                            <span className={styles.navLink}>Toate serviciile</span>
+                            <span className={styles.navLink}>Modele</span>
                         </Link>
                         <Link href="/contact" passHref>
                             <span className={styles.navLink}>Contact</span>
@@ -92,13 +98,16 @@ const Navbar = () => {
                     <Link href="/momente" passHref>
                         <span className={styles.navLinkSpecial}>Momente QR</span>
                     </Link>
+                    <Link href="/momente" passHref>
+                        <span className={styles.navLinkSpecial}>Gestiune</span>
+                    </Link>
                 </div>
                 <div className={styles.mobileMenuCentered}>
                     <Link className={styles.mobileLink} href="/preturi" passHref>
                         <span className={styles.navLink}>Preturi</span>
                     </Link>
                     <Link className={styles.mobileLink} href="/servicii" passHref>
-                        <span className={styles.navLink}>Toate serviciile</span>
+                        <span className={styles.navLink}>Modele</span>
                     </Link>
                     <Link className={styles.mobileLink} href="/contact" passHref>
                         <span className={styles.navLink}>Contact</span>

@@ -40,11 +40,12 @@ export default function HeroSection() {
                
               <label className={styles.heroLabel} htmlFor="invitationName">Numele invitației</label>
                 <input
+                className={`handwritten`}
                 type="text"
                 id="invitationName"
                 placeholder="Exemplu: Madalina & Dan"
                 />
-                <button className={styles.demoBtn}>Pornește</button>
+                <button className={styles.demoBtn}>START</button>
               </div>
             </div>
           </div>

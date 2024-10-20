@@ -27,20 +27,22 @@
 
 .demoBtn {
   margin-top: 20px;
-  border-radius: 30px;
+  border-radius: 25px;
   padding: 10px 10px;
-  transition: filter 0.5s ease;
+  transition: background-color 0.2s ease;
+  font-size: 18px;
+  font-weight: 800;
   border: none;
-  color: white;
-  font-weight: bold;
-  background-image: url('/images/backdrop.svg');
+  color: var(--white);
+  background-color: rgba(255,255,255,0.3);
+  border: 2px solid var(--white);
   background-size: cover;
-  filter:sepia(0.2);
   
 }
 
 .demoBtn:hover {
-  filter:sepia(0.8);
+  background-color: var(--white);
+  color: var(--orange);
 }
 
 .customCard .card-body {
@@ -83,6 +85,8 @@
   text-align: center;
   border-radius: 20px 20px 0 0;
   padding: 2px 5px 30px 5px;
-  background-color: var(--secondary);
+  background-color: var(--orange);
+  background-blend-mode: darken(5);
+  z-index: -1;
   margin-bottom: -28px;
 }

@@ -2,8 +2,9 @@
   --white: rgba(255, 251, 243, 1);
   --main: rgba(255, 251, 243, 0.9);
   --secondary: #AAB396;
-  --light: rgba(249, 245, 231, 0.9);
+  --light: rgba(249, 245, 231, 1);
   --dark: #332d00;
+  --orange: #e38c22;
 }
 
 html,
@@ -25,6 +26,7 @@ input {
   border-radius: 25px;
   padding: 10px 15px;
   background-color: var(--white);
+  font-size: 18px !important;
 }
 
 .madanMain {
@@ -36,7 +38,7 @@ a {
 }
 
 .handwritten {
-  font-family: var(--font-marck), cursive;
+  font-family: var(--font-handwritter), cursive;
   font-size: 2em;
 }
 

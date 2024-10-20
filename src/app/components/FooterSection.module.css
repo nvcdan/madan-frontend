@@ -1,0 +1,12 @@
+.footerSection {
+  padding: 20px 0;
+  background-color: var(--main);
+  border-top: 1px solid rgb(243, 233, 206);
+}
+
+.logo {
+  max-width: 150px;
+  width: 100%; 
+  height: auto;
+  margin: 0 15px; 
+}

@@ -1,0 +1,46 @@
+.testimonialSection {
+  position: relative;
+  overflow: hidden;
+}
+
+.carouselWrapper {
+  position: relative;
+  height: auto;
+}
+
+.testimonialCard {
+  border-radius: 20px;
+  width: 100%;
+}
+
+.cardContent {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.indicators {
+  margin-top: 20px;
+}
+
+.indicator {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: var(--light);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background-color: var(--dark);
+}
+
+/* Responsivitate */
+@media (max-width: 768px) {
+  .cardContent {
+    padding: 20px;
+  }
+}

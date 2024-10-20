@@ -1,5 +1,5 @@
 import '@/app/styles/globals.css';
-import { Playfair_Display, Lato, Marck_Script } from 'next/font/google';
+import { Playfair_Display, Lato, Dancing_Script } from 'next/font/google';
 import  "bootstrap/dist/css/bootstrap.min.css";
 import Bootstrap from './Bootstrap';
 
@@ -10,10 +10,10 @@ const playfairDisplay = Playfair_Display({
   display: 'swap',        
 });
 
-const marckScript = Marck_Script({
+const handwritter = Dancing_Script({
   subsets: ['latin'],
   weight: ['400'], 
-  variable: '--font-marck',
+  variable: '--font-handwritter',
   display: 'swap',        
 });
 
@@ -56,7 +56,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ro" className={`${playfairDisplay.variable, lato.variable, marckScript.variable}`}>
+    <html lang="ro" className={`${playfairDisplay.variable, lato.variable, handwritter.variable}`}>
       <Bootstrap/>
       <body>{children}</body>
     </html>

@@ -1,0 +1,118 @@
+/* FaqSection.module.css */
+
+.faqSection {
+    background-color: var(--secondary);
+    color: var(--white);
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    background-image: url('/images/faq.svg');
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: 200%;
+  }
+
+  .contactButton {
+    background-color: var(--white);
+    color: var(--dark) !important;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 1em;
+    border: 2px solid var(--white);
+  }
+
+  .contactButton:hover {
+    background-color: var(--white);
+    color: var(--dark);
+  }
+  
+  .title {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: var(--white);
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: var(--white);
+  }
+  
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .accordionItem {
+    background-color: var(--light);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .accordionButton {
+    background: none;
+    border: none;
+    padding: 15px 20px;
+    width: 100%;
+    text-align: left;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .accordionButton:hover {
+    cursor: pointer;
+  }
+  
+  .accordionContent {
+    overflow: hidden;
+    max-height: 0;
+    background-color: var(--white);
+    border-radius: 25px;
+    color: var(--dark);
+    transition: max-height 0.3s ease;
+  }
+  
+  .icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: var(--white);
+    color: var(--dark);
+  }
+  
+  .iconActive {
+    transform: rotate(-135deg); /* Rotește "+" pentru a forma "X" */
+  }
+  
+  /* Responsivitate */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+  
+    .subtitle {
+      font-size: 1rem;
+    }
+  
+    .talkButton {
+      font-size: 0.9rem;
+    }
+  
+    .accordionButton {
+      font-size: 1rem;
+    }
+  }
