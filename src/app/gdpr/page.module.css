@@ -1,0 +1,6 @@
+.legalContainer {
+    border-radius: 20px;
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 4em;
+}

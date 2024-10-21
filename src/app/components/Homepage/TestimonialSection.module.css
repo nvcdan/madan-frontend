@@ -11,12 +11,13 @@
 .testimonialCard {
   border-radius: 20px;
   width: 100%;
+  box-shadow: 0 4px 8px rgba(97, 63, 0, 0.1);
 }
 
 .cardContent {
-  background: #fff;
+  background: white;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 20px;
   text-align: center;
 }
 

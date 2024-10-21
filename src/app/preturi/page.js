@@ -1,5 +1,5 @@
 import Navbar from '@/app/components/Navbar';
-import Breadcrumbs from '@/app/components/Breadcrumbs';
+import Breadcrumbs from '@/app/components/Homepage/Breadcrumbs';
 
 export const metadata = {
   title: 'MADAN | Preturi',

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useEffect } from 'react';
-import styles from '@/app/components/PriceSection.module.css';
+import styles from '@/app/components/Homepage/PriceSection.module.css';
 
 const InfoModal = ({ isOpen, onClose, pricePerPerson, thresholds }) => {
     useEffect(() => {
@@ -37,7 +37,7 @@ const InfoModal = ({ isOpen, onClose, pricePerPerson, thresholds }) => {
                 <button className={styles.closeButton} onClick={onClose}>
                     &times;
                 </button>
-                <div className={`${styles.modalBody}`}>
+                <div className={`py-5 ${styles.modalBody}`}>
                     <h2>Cum se calculează prețul?</h2>
                     <p>
                         Prețul se calculează în funcție de pachetul ales și numărul de invitați.
@@ -54,10 +54,10 @@ const InfoModal = ({ isOpen, onClose, pricePerPerson, thresholds }) => {
                     Între {thresholds[0] + 1} și {thresholds[1]} invitați: 150 x preț pachet<br />
                     Între {thresholds[1] + 1} și {thresholds[2]} invitați: 200 x preț pachet<br />
                     Peste {thresholds[2]} invitați: 250 x preț pachet<br />
-                    <hr></hr>
+                    <br/>
                     <p>
                         De exemplu, dacă alegi pachetul <b>Festiv</b> și ai 120 de invitați, prețul va fi: <br></br>
-                        <b>150 x {pricePerPerson.festiv} lei = {150 * pricePerPerson.festiv} lei </b>
+                        150 x {pricePerPerson.festiv} lei = {150 * pricePerPerson.festiv} lei 
                     </p>
                 </div>
             </div>

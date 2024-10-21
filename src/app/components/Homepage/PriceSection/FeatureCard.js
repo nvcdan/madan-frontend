@@ -1,4 +1,4 @@
-import styles from '@/app/components/PriceSection.module.css';
+import styles from '@/app/components/Homepage/PriceSection.module.css';
 
 const FeatureCard = ({ feature }) => {
   return (

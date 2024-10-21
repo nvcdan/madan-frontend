@@ -2,6 +2,7 @@
   --white: rgba(255, 251, 243, 1);
   --main: rgba(255, 251, 243, 0.9);
   --secondary: #AAB396;
+  --secondary-dark: #90997B;
   --light: rgba(249, 245, 231, 1);
   --dark: #332d00;
   --orange: #e38c22;
@@ -21,12 +22,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+  color: var(--orange) !important;
+}
+
+
+a {
+  color: var(--orange) !important;
+}
+
 input {
   border: 2px solid var(--light);
   border-radius: 25px;
   padding: 10px 15px;
   background-color: var(--white);
   font-size: 18px !important;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 .madanMain {

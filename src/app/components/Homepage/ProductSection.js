@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect } from 'react';
 import VanillaTilt from 'vanilla-tilt';
-import styles from '@/app/components/ProductSection.module.css';
+import styles from '@/app/components/Homepage/ProductSection.module.css';
 
 export default function ProductSection() {
 

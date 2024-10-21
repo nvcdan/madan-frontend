@@ -9,6 +9,7 @@
   align-items: center;
   border-radius: 30px;
   margin-top: 1em;
+  box-shadow: 0 4px 8px rgba(52, 35, 0, 0.2);
 }
 
 .mainSection h1 {
@@ -27,22 +28,21 @@
 
 .demoBtn {
   margin-top: 20px;
-  border-radius: 25px;
+  border-radius: 15px;
   padding: 10px 10px;
   transition: background-color 0.2s ease;
   font-size: 18px;
   font-weight: 800;
   border: none;
   color: var(--white);
-  background-color: rgba(255,255,255,0.3);
-  border: 2px solid var(--white);
-  background-size: cover;
-  
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--white);
+  background-blend-mode: overlay;
 }
 
 .demoBtn:hover {
   background-color: var(--white);
-  color: var(--orange);
+  color: var(--secondary-dark);
 }
 
 .customCard .card-body {
@@ -68,16 +68,6 @@
   margin-top: 30px;
 }
 
-.border {
-  border: 2px solid #ddd;
-  transition: transform 0.3s;
-}
-
-.border:hover {
-  transform: scale(1.05);
-  background-color: #f9f9f9;
-}
-
 .heroLabel {
   font-weight: 600;
   color: var(--white);
@@ -85,7 +75,7 @@
   text-align: center;
   border-radius: 20px 20px 0 0;
   padding: 2px 5px 30px 5px;
-  background-color: var(--orange);
+  background-color: var(--dark);
   background-blend-mode: darken(5);
   z-index: -1;
   margin-bottom: -28px;

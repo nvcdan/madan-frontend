@@ -1,5 +1,5 @@
-import FeatureCard from '@/app/components/PriceSection/FeatureCard';
-import styles from '@/app/components/PriceSection.module.css';
+import FeatureCard from '@/app/components/Homepage/PriceSection/FeatureCard';
+import styles from '@/app/components/Homepage/PriceSection.module.css';
 
 const TabContent = ({ tabs, activeTab }) => {
   return (

@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect } from 'react';
 import VanillaTilt from 'vanilla-tilt';
-import styles from '@/app/components/HeroSection.module.css';
+import styles from '@/app/components/Homepage/HeroSection.module.css';
 
 export default function HeroSection() {
 
@@ -20,7 +20,6 @@ export default function HeroSection() {
       }
 
       return () => {
-        // Verificăm dacă `tiltRef.current` nu este `null`
         if (tiltRef.current && tiltRef.current.vanillaTilt) {
           tiltRef.current.vanillaTilt.destroy();
         }
@@ -45,7 +44,7 @@ export default function HeroSection() {
                 id="invitationName"
                 placeholder="Exemplu: Madalina & Dan"
                 />
-                <button className={styles.demoBtn}>START</button>
+                <button className={`handwritten ${styles.demoBtn} `}>START</button>
               </div>
             </div>
           </div>

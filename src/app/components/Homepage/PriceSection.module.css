@@ -3,15 +3,14 @@
 }
 
 .currentPrice {
-  background-color: var(--white);
-  border-radius: 50px;
-  max-width: 400px;
-  margin: 0 auto;
+  background-color: transparent;
+  width: 100%;
 }
 
 .currentPriceHeading {
-  font-weight: 400;
-  font-size: 5em;
+  font-weight: 800;
+  font-size: 4em;
+  color: var(--secondary-dark);
 }
 
 .trackContainer {
@@ -97,6 +96,7 @@
   background-color: var(--white);
   border-radius: 30px;
   margin-bottom: 5em;
+  box-shadow: 0 4px 8px rgba(97, 63, 0, 0.1);
 }
 
 
@@ -113,6 +113,7 @@
   overflow: hidden;
   width: 600px;
   border: 6px solid var(--main);
+  box-shadow: 0 4px 8px rgba(97, 63, 0, 0.1);
 }
 
 .tab {
@@ -148,7 +149,8 @@
 .tabContent {
   background-color: var(--white);
   border-radius: 25px;
-  padding: 40px
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(97, 63, 0, 0.1);
 }
 
 .featureCardContainer {
@@ -170,6 +172,7 @@
   background-color: var(--dark);
   margin: 8px 8px 0 0;
   height: 70px;
+  box-shadow: 0 4px 8px rgba(97, 63, 0, 0.1);
 }
 
 .featureCard:hover {
@@ -278,17 +281,25 @@
   color: #000;
 }
 
+.priceContainer{
+  width: 300px;
+  min-width: 200px;
+  margin: 0 auto;
+  bottom: 0;
+  right: 50%;
+  z-index: 999;
+}
+
 .infoButton {
   margin: 0;
   background: transparent;
   color: var(--dark);
   border: none;
+  width: 100%;
   padding: 5px 15px;
-  border-radius: 25px;
-  border: 2px solid transparent;
+  border-top: 1px dashed var(--dark);
 }
 
 .infoButton:hover {
-  border: 2px solid var(--dark);
-  color: var(--dark);
+  color: var(--secondary-dark);
 }

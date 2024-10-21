@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Range, getTrackBackground } from 'react-range';
-import Tabs from '@/app/components/PriceSection/Tabs';
-import TabContent from '@/app/components/PriceSection/TabContent';
-import InfoModal from '@/app/components/PriceSection/InfoModal';
-import styles from '@/app/components/PriceSection.module.css';
+import Tabs from '@/app/components/Homepage/PriceSection/Tabs';
+import TabContent from '@/app/components/Homepage/PriceSection/TabContent';
+import InfoModal from '@/app/components/Homepage/PriceSection/InfoModal';
+import styles from '@/app/components/Homepage/PriceSection.module.css';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 
 const MAX_USERS = 300 + 10;
@@ -84,19 +86,25 @@ const PriceSection = () => {
 
   const currentPrice = calculatePrice(users, activeTab);
 
+  useEffect(() => {
+    AOS.init({ duration: 200, offset: 50 });
+  }, []);
+
   return (
     <section className={`container-fluid ${styles.priceSection} py-5`}>
       <div className="container text-center mt-5">
         <h1>Pe măsura ta, <b>fără costuri ascunse</b></h1>
         <h4>Simplu, transparent și adaptat 100% evenimentelor tale!</h4>
-        <div className={`${styles.currentPrice} mt-5`}>
-          <h1 className={`${styles.currentPriceHeading} handwritten`}>{currentPrice} lei</h1>
-        </div>
-        <button onClick={() => setIsModalOpen(true)} className={styles.infoButton}>
-        ⓘ Afiseaza detaliat calculul pretului
+        <div data-aos="zoom-in" className={` ${styles.priceContainer} mt-4` }>
+          <div className={`${styles.currentPrice}`}>
+            <h1 className={`${styles.currentPriceHeading} handwritten`}>{currentPrice} RON</h1>
+          </div>
+          <button onClick={() => setIsModalOpen(true)} className={`${styles.infoButton}`}>
+            ⓘ Afiseaza detaliat calculul pretului
           </button>
+        </div>
         <br />
-        <div className="mt-5"></div>
+        <div className="mt-2"></div>
         <p className="handwritten text-end">Câți invitați vei avea?</p>
         <div className={`${styles.sliderSection}`}>
           <Range

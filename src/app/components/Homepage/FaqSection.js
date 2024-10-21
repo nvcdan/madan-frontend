@@ -1,7 +1,10 @@
 "use client"
 
-import { useState, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import styles from './FaqSection.module.css';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+
 
 const FaqSection = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -34,6 +37,17 @@ const FaqSection = () => {
     setActiveIndex(index === activeIndex ? null : index);
   };
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  useEffect(() => {
+    AOS.init({ duration: 300, offset: -250  });
+  }, []);
+
   return (
     <section className={styles.faqSection}>
       <div className="container">
@@ -43,7 +57,7 @@ const FaqSection = () => {
             <p className={styles.subtitle}>
               Îți putem răspunde la câteva întrebări chiar acum! Nu găsești răspunsul căutat aici? Hai să discutăm și să găsim soluția potrivită pentru tine.
             </p>
-            <button className={`btn ${styles.contactButton}`}>Contactează-ne →</button>
+            <button onClick={scrollToContact} className={`btn ${styles.contactButton}`}>Contactează-ne →</button>
           </div>
           <div className="col-lg-7">
             <div className={styles.accordion}>

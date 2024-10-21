@@ -1,10 +1,10 @@
 import Navbar from '@/app/components/Navbar';
-import HeroSection from '@/app/components/HeroSection';
-import ProductSection from '@/app/components/ProductSection';
-import PriceSection from '@/app/components/PriceSection';
-import FaqSection from '@/app/components/FaqSection';
-import TestimonialSection from './components/TestimonialSection';
-import ContactSection from './components/ContactSection';
+import HeroSection from '@/app/components/Homepage/HeroSection';
+import ProductSection from '@/app/components/Homepage/ProductSection';
+import PriceSection from '@/app/components/Homepage/PriceSection';
+import FaqSection from '@/app/components/Homepage/FaqSection';
+import TestimonialSection from './components/Homepage/TestimonialSection';
+import ContactSection from './components/Homepage/ContactSection';
 import FooterSection from './components/FooterSection';
 
 export const metadata = {
@@ -48,41 +48,6 @@ export default function Home() {
       <FaqSection />
       <TestimonialSection />
       <ContactSection />
-
-      {/* CONTACT */}
-      <section className="contact my-5 bg-light">
-        <div className="container">
-          <h2 className="text-center">Contact</h2>
-          <p className="text-center">
-            Pentru mai multe informații, nu ezitați să ne contactați.
-          </p>
-          <form className="mt-4">
-            <div className="row">
-              <div className="col-md-6 mb-3">
-                <label htmlFor="nume" className="form-label">
-                  Nume
-                </label>
-                <input type="text" className="form-control" id="nume" placeholder="Introduceți numele dvs." />
-              </div>
-              <div className="col-md-6 mb-3">
-                <label htmlFor="email" className="form-label">
-                  Email
-                </label>
-                <input type="email" className="form-control" id="email" placeholder="Introduceți email-ul dvs." />
-              </div>
-            </div>
-            <div className="mb-3">
-              <label htmlFor="mesaj" className="form-label">
-                Mesaj
-              </label>
-              <textarea className="form-control" id="mesaj" rows="4" placeholder="Scrieți mesajul dvs. aici"></textarea>
-            </div>
-            <button type="submit" className="btn btn-primary">
-              Trimite
-            </button>
-          </form>
-        </div>
-      </section>
       <FooterSection />
     </>
   );
