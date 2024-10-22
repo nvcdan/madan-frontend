@@ -39,21 +39,21 @@ const tabs = [
     key: 'intim',
     label: 'Intim',
     content: 'Intim',
-    description: 'Aici poți adăuga detalii despre evenimentul tău și ce anume îți dorești să includă.',
+    description: 'Pachetul ideal pentru evenimente restrânse, intime, unde dorințele tale sunt puse în prim-plan.',
     features: getFeatures(),
   },
   {
     key: 'festiv',
     label: 'Festiv',
     content: 'Festiv',
-    description: 'Prețurile sunt ajustate în funcție de numărul de invitați și de serviciile selectate.',
+    description: 'Perfect pentru evenimente mai mari și sărbători speciale.',
     features: getFeatures({ randare3D: true, momenteQR: true }),
   },
   {
     key: 'complet',
     label: 'Complet',
     content: 'Complet',
-    description: 'Exploră toate serviciile pe care le putem oferi pentru a face evenimentul tău memorabil.',
+    description: 'Pentru evenimentele premium și pentru o experiență completă și impecabilă.',
     features: getFeatures({ randare3D: true, momenteQR: true, cerintePersonalizate: true, invitatieFizica: true }),
   },
 ];
@@ -84,20 +84,38 @@ const PriceSection = () => {
     setActiveTab(tabKey);
   };
 
-  const currentPrice = calculatePrice(users, activeTab);
+  var currentPrice = calculatePrice(users, activeTab);
+  var [displayedPrice, setDisplayedPrice] = useState(currentPrice);
 
   useEffect(() => {
     AOS.init({ duration: 200, offset: 50 });
   }, []);
+
+  useEffect(() => {
+    let start = displayedPrice;
+    const end = currentPrice;
+    const duration = 200; 
+    const increment = (end - start) / (duration / 10);
+    let current = start;
+    const timer = setInterval(() => {
+      current += increment;
+      if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+        current = end;
+        clearInterval(timer);
+      }
+      setDisplayedPrice(Math.round(current));
+    }, 5);
+    return () => clearInterval(timer);
+  }, [currentPrice]);
 
   return (
     <section className={`container-fluid ${styles.priceSection} py-5`}>
       <div className="container text-center mt-5">
         <h1>Pe măsura ta, <b>fără costuri ascunse</b></h1>
         <h4>Simplu, transparent și adaptat 100% evenimentelor tale!</h4>
-        <div data-aos="zoom-in" className={` ${styles.priceContainer} mt-4` }>
-          <div className={`${styles.currentPrice}`}>
-            <h1 className={`${styles.currentPriceHeading} handwritten`}>{currentPrice} RON</h1>
+        <div className={` ${styles.priceContainer} mt-4` }>
+          <div data-aos="zoom-in" className={`${styles.currentPrice}`}>
+            <h1 className={`${styles.currentPriceHeading} handwritten`}>{displayedPrice} RON</h1>
           </div>
           <button onClick={() => setIsModalOpen(true)} className={`${styles.infoButton}`}>
             ⓘ Afiseaza detaliat calculul pretului

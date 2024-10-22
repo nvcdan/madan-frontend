@@ -38,26 +38,32 @@ const InfoModal = ({ isOpen, onClose, pricePerPerson, thresholds }) => {
                     &times;
                 </button>
                 <div className={`py-5 ${styles.modalBody}`}>
-                    <h2>Cum se calculează prețul?</h2>
+                    <h2 className="handwritten">Plătești mai puțin pe măsură ce inviți mai mulți!</h2>
                     <p>
-                        Prețul se calculează în funcție de pachetul ales și numărul de invitați.
+                        Cu cât lista ta de invitați crește, cu atât economisești mai mult! Prețurile noastre sunt concepute pentru a-ți oferi cea mai bună valoare, indiferent de mărimea evenimentului tău.
                     </p>
-                    <h3>Pachete</h3>
-                    <b>Intim</b> - {pricePerPerson.intim} lei / persoană<br />
-                    <b>Festiv</b> - {pricePerPerson.festiv} lei / persoană<br />
-                    <b>Complet</b> - {pricePerPerson.complet} lei / persoană<br />
-                    <h3 className="mt-5">Numărul de invitați</h3>
+                    <h3 className="handwritten mt-5">Alege pachetul perfect pentru tine</h3>
                     <p>
-                        În funcție de numărul de invitați, se aplică următoarele tarife:
+                        <b>Intim</b> - {pricePerPerson.intim} lei / invitat<br />
+                        <b>Festiv</b> - {pricePerPerson.festiv} lei / invitat<br />
+                        <b>Complet</b> - {pricePerPerson.complet} lei / invitat<br />
                     </p>
-                    Până la {thresholds[0]} invitați: 100 x preț per persoană<br />
-                    Între {thresholds[0] + 1} și {thresholds[1]} invitați: 150 x preț pachet<br />
-                    Între {thresholds[1] + 1} și {thresholds[2]} invitați: 200 x preț pachet<br />
-                    Peste {thresholds[2]} invitați: 250 x preț pachet<br />
-                    <br/>
+                    <h3 className="handwritten mt-5">Mai mulți invitați, mai multe economii</h3>
                     <p>
-                        De exemplu, dacă alegi pachetul <b>Festiv</b> și ai 120 de invitați, prețul va fi: <br></br>
-                        150 x {pricePerPerson.festiv} lei = {150 * pricePerPerson.festiv} lei 
+                        Iată cum scade costul per invitat pe măsură ce numărul de invitați crește:
+                    </p>
+                    <p>
+                        <b>Până la {thresholds[0]} invitați</b>: plătești pentru 100 invitați<br />
+                        <b>Între {thresholds[0] + 1} și {thresholds[1]} invitați</b>: plătești pentru 150 invitați<br />
+                        <b>Între {thresholds[1] + 1} și {thresholds[2]} invitați</b>: plătești pentru 200 invitați<br />
+                        <b>Peste {thresholds[2]} invitați (nelimitat)</b>: plătești pentru 250 invitați<br />
+                    </p>
+                    <p>
+                        Astfel, deși numărul de invitați crește, costul suplimentar este minim, iar prețul per invitat scade semnificativ!
+                    </p>   
+                    <h3 className="handwritten mt-5">De ce este prețul variabil?</h3>               
+                    <p>
+                        Pentru ca ne gândim la tine! Invitând mai multe persoane, beneficiezi de un preț mai mic per invitat și economisești bani!
                     </p>
                 </div>
             </div>

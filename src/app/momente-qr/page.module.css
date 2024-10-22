@@ -1,0 +1,50 @@
+.momenteQrSection {
+    min-height: 80vh;
+    background-color: var(--dark);
+    padding-top: 5em;
+    color: var(--white);
+    text-align: center;
+}
+
+.heading h1 {
+    font-weight: 900;
+    line-height: 1;
+}
+
+.actionButton {
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    background-color: var(--white);
+    margin: 0 auto;
+    color: var(--dark) !important;
+    width: max-content;
+}
+
+.actionButton:hover {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    color: var(--white) !important;
+}
+
+.qrCard {
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--light);
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--light);
+    max-width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-5deg) scale(1.1);
+}
+
+.image {
+    border-radius: 15px;
+    object-fit: contain; 
+    width: 100%;
+    height: auto;
+}

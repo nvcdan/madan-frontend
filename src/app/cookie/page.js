@@ -1,5 +1,5 @@
 import Navbar from '@/app/components/Navbar';
-import Breadcrumbs from '@/app/components/Homepage/Breadcrumbs';
+import Breadcrumbs from '@/app/components/Breadcrumbs';
 import FooterSection from '../components/FooterSection';
 import styles from './page.module.css';
 import { contactInfo } from '@/app/data/contactInfo';
@@ -12,7 +12,7 @@ export const metadata = {
 export default function PoliticaCookie() {
   const breadcrumbPaths = [
     { href: '/', label: 'Acasă' },
-    { href: '/cookie', label: 'Politica de Cookie-uri' },
+    { href: '/cookie', label: 'Politica de cookie-uri' },
   ];
 
   return (

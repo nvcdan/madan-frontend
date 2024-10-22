@@ -46,10 +46,10 @@ const Navbar = () => {
                             </Link>
                         </div>
                         <div className="d-none d-md-flex ms-4">
-                            <Link href="/" passHref>
+                            <Link href="/invitatii" passHref>
                                 <span className={styles.navLinkSpecial}>Invitatii</span>
                             </Link>
-                            <Link href="/momente" passHref>
+                            <Link href="/momente-qr" passHref>
                                 <span className={styles.navLinkSpecial}>Momente QR</span>
                             </Link>
                             <Link href="/gestiune" passHref>
@@ -92,13 +92,13 @@ const Navbar = () => {
             </div> */}
             <div className={`d-md-none ${styles.mobileMenu} ${navOpen ? styles.open : ''}`}>
                 <div className={` container ${styles.mobileTopNav} `}>
-                    <Link href="/" passHref>
+                    <Link href="/invitatii" passHref>
                         <span className={styles.navLinkSpecial}>Invitații</span>
                     </Link>
-                    <Link href="/momente" passHref>
+                    <Link href="/momente-qr" passHref>
                         <span className={styles.navLinkSpecial}>Momente QR</span>
                     </Link>
-                    <Link href="/momente" passHref>
+                    <Link href="/gestiune" passHref>
                         <span className={styles.navLinkSpecial}>Gestiune</span>
                     </Link>
                 </div>
@@ -106,7 +106,7 @@ const Navbar = () => {
                     <Link className={styles.mobileLink} href="/preturi" passHref>
                         <span className={styles.navLink}>Preturi</span>
                     </Link>
-                    <Link className={styles.mobileLink} href="/servicii" passHref>
+                    <Link className={styles.mobileLink} href="/modele" passHref>
                         <span className={styles.navLink}>Modele</span>
                     </Link>
                     <Link className={styles.mobileLink} href="/contact" passHref>

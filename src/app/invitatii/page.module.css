@@ -1,0 +1,25 @@
+.inviteSection {
+    height: 80vh;
+    background-color: var(--light);
+    padding-top: 5em;
+    text-align: center;
+}
+
+.heading h1{
+    font-weight: 900;
+    line-height: 1;
+}
+
+.actionButton {
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: 2px solid var(--dark);
+    margin: 0 auto;
+    color: var(--dark) !important;
+    width:max-content;
+}
+
+.actionButton:hover {
+    background-color: var(--dark);
+    color: var(--white) !important;
+}

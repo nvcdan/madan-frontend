@@ -26,7 +26,7 @@ export default function Home() {
                 </h1>
               </div>
               <div className="col-lg-6 d-flex flex-column justify-content-end text-end">
-                <em>“Amintirile sunt comoara sufletului.” — Marcus Tullius Cicero</em>
+                <em>“Emoțiile dau culoare amintirilor.” — Aurelius</em>
               </div>
             </div>
           </div>

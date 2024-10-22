@@ -1,5 +1,5 @@
 import Navbar from '@/app/components/Navbar';
-import Breadcrumbs from '@/app/components/Homepage/Breadcrumbs';
+import Breadcrumbs from '@/app/components/Breadcrumbs';
 import FooterSection from '../components/FooterSection';
 import styles from './page.module.css';
 

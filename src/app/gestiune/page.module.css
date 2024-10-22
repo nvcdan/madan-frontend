@@ -1,0 +1,26 @@
+.gestiuneSection {
+    height: 80vh;
+    text-align: center;
+    background-color: var(--secondary-dark);
+    padding-top: 5em;
+    color: var(--white);
+}
+
+.heading h1{
+    font-weight: 900;
+    line-height: 1;
+}
+
+.actionButton {
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: 2px solid var(--white);
+    margin: 0 auto;
+    color: var(--white) !important;
+    width:max-content;
+}
+
+.actionButton:hover {
+    background-color: var(--white);
+    color: var(--dark) !important;
+}

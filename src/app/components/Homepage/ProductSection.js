@@ -43,7 +43,7 @@ export default function ProductSection() {
             <h3>unice și personalizate</h3>
             <p>Transformă-ți evenimentul într-o experiență memorabilă cu invitații personalizate online, oferind invitaților o modalitate elegantă de confirmare a prezenței.</p>
 
-            <button className={`btn ${styles.cardButtonLight}`}>Afla mai multe</button>
+            <a href="/invitatii" className={`btn ${styles.cardButtonLight}`}>Afla mai multe</a>
           </div>
         </div>
         <div className="col-12 col-xl-4 col-md-6 mb-4">
@@ -55,7 +55,7 @@ export default function ProductSection() {
             <h1 className="handwritten">Momente QR</h1>
             <p>Oferă invitaților tăi posibilitatea de a împărtăși instant momente prețioase – fotografii și videoclipuri – cu toți participanții, direct printr-un cod QR.</p>
 
-            <button className={`btn ${styles.cardButton}`}>Afla mai multe</button>
+            <a href="/momente-qr" className={`btn ${styles.cardButton}`}>Afla mai multe</a>
           </div>
         </div>
         <div className="col-12 col-xl-4 col-md-12 mb-4">
@@ -67,7 +67,7 @@ export default function ProductSection() {
             <h3>completa a evenimentului</h3>
             <p>Organizează-ți evenimentul fără stres! De la repartizarea invitaților la mese, până la estimarea costurilor, ai totul sub control.</p>
 
-            <button className={`btn ${styles.cardButton}`}>Afla mai multe</button>
+            <a href="/gestiune" className={`btn ${styles.cardButton}`}>Afla mai multe</a>
           </div>
         </div>
         </div>

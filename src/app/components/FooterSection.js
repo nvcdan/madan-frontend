@@ -19,7 +19,7 @@ const FooterSection = () => {
             <nav className={styles.navigation}>
               <ul className={styles.navList}>
                 <li><a href="/invitatii">Invitații</a></li>
-                <li><a href="/momenteqr">Momente QR</a></li>
+                <li><a href="/momente-qr">Momente QR</a></li>
                 <li><a href="/gestiune">Gestiune</a></li>
               </ul>
             </nav>
